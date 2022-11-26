@@ -1,5 +1,5 @@
 # Must use a Cuda version 11+
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
 
 WORKDIR /
 
@@ -14,9 +14,6 @@ RUN pip3 install -r requirements.txt
 # We add the banana boilerplate here
 ADD server.py .
 EXPOSE 8000
-
-# Add your huggingface auth key here
-ENV HF_AUTH_TOKEN=your_token
 
 # Add your model weight files 
 # (in this case we have a python script)

@@ -1,7 +1,7 @@
 
 # 🍌 Banana Serverless
 
-This repo gives a basic framework for serving Stable Diffusion in production using simple HTTP servers.
+This repo gives a basic framework for serving Stable Diffusion v2 in production using simple HTTP servers. Does not need a Huggingface token, ready for 1-click deploy
 
 ## Instant Deploy
 Stable Diffusion is now available as a prebult model on Banana! [See how to deploy Stable Diffusion in seconds](https://docs.banana.dev/banana-docs/core-concepts/inference-server/1-click-deploy).
