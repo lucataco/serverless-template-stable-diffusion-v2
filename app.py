@@ -9,7 +9,6 @@ from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 # Load your model to GPU as a global variable here using the variable name "model"
 def init():
     global model
-    global scheduler
 
     repo_id = "stabilityai/stable-diffusion-2"
     scheduler = EulerDiscreteScheduler.from_pretrained(
@@ -28,7 +27,6 @@ def init():
 # Reference your preloaded global model variable here.
 def inference(model_inputs:dict) -> dict:
     global model
-    global scheduler
 
     # Parse out your arguments
     prompt = model_inputs.get('prompt', None)
