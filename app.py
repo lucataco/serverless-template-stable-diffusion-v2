@@ -16,12 +16,7 @@ def init():
         subfolder="scheduler", 
         prediction_type="v_prediction"
     )
-    model = StableDiffusionPipeline.from_pretrained(
-        repo_id, 
-        torch_dtype=torch.float16, 
-        revision="fp16", 
-        scheduler=scheduler
-    ).to("cuda")
+    model = StableDiffusionPipeline.from_pretrained(repo_id, torch_dtype=torch.float16, revision="fp16", scheduler=scheduler).to("cuda")
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
